@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+.container {
+    width:100vw;
+    height:100vh;
+    margin-top: 6rem;
+}
+.tab-container {
+    width:800px;
+    height:4rem;
+    background:var(--dark-green);
+    color:#fff;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow:0 4px 6px rgba(0,0,0,0.3);
+}
+.tab-item {
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+}
+.tab-item h1 {
+    text-align: center;
+    margin-left:10px;
+    margin-top:20px;
+}
+.tab-item:hover{
+    background:white;
+    color:var(--dark-green);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tab-body {
+    width:800px;
+    margin:0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.planets-container {
+    width:800px;
+    margin:0 auto;
+    margin-top:20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.planet-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content:space-around;
+  margin-bottom: 20px;
+  background:#faf9f9;
 }
-
-.App-link {
-  color: #61dafb;
+.btn {
+    padding:5px 15px;
+    border:0;
+    outline:none;
+    box-shadow:0 2px 4px rgba(0,0,0,0.12);
+    cursor:pointer;
+    border-radius:50px;
+    font-size: 18px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-fav {
+    color:#fff;
+    background:var(--dark-green);
+}
+.btn-remove {
+    background:var(--color-primary-dark);
+    color:#fff;
+}
+.no-element {
+    margin:0 auto;
+    text-align: center;
+    margin-top:20px;
+    font-size:24px;
+}
+@media (max-width:500px) {
+    .tab-container{
+        width:80vw;
+    }
+    .planets-container {
+        width:80vw;
+        margin:0 auto;
+        margin-top:40px;
+        margin-left:40px;
+    }
+    .btn {
+        font-size:14px;
+        padding:5px 10px;
+    }
+    .no-element {
+        font-size:24px;
+        text-align: center;
+        margin-left:-300px;
+        margin-top:40px;
+    }
 }
